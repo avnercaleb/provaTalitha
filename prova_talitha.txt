@@ -1,0 +1,112 @@
+MODULE Module1
+	CONST robtarget phome:=[[506.29,0.00,679.50],[0.5,-2.44762E-9,0.866025,-1.41313E-9],[0,0,-1,0],[9E+9,9E+9,9E+9,9E+9,9E+9,9E+9]];
+	CONST robtarget phome10:=[[506.29,0.00,679.50],[0.5,-2.44762E-9,0.866025,-1.41313E-9],[0,0,-1,0],[9E+9,9E+9,9E+9,9E+9,9E+9,9E+9]];
+	CONST robtarget p10:=[[545.00,-103.65,602.22],[0.423961,0.084899,0.900806,-0.0399574],[-1,0,-1,0],[9E+9,9E+9,9E+9,9E+9,9E+9,9E+9]];
+	CONST robtarget phome20:=[[506.29,0.00,679.50],[0.5,-9.33376E-9,0.866025,-5.38885E-9],[0,0,-1,0],[9E+9,9E+9,9E+9,9E+9,9E+9,9E+9]];
+    !***********************************************************
+    !
+    ! Module:  Module1
+    !
+    ! Description:
+    !   <Insert description here>
+    !
+    ! Author: PC-Avner
+    !
+    ! Version: 1.0
+    !
+    !***********************************************************
+    
+    
+    !***********************************************************
+    !
+    ! Procedure main
+    !
+    !   This is the entry point of your program
+    !
+    !***********************************************************
+    PROC main()
+        TPWrite "Ola operador, programa desenvolvido por avnerCaleb";
+        WaitTime 7;
+        TPErase;
+        TPReadFK reg1, "Qual letra deseja desenhar?", "R", stEmpty, "S", stEmpty, "W";
+                
+        IF reg1 = 1 THEN
+        r;
+        ENDIF
+        
+        IF reg1 = 2 THEN
+        s;
+        ENDIF
+        
+        IF reg1 = 3 THEN
+        w;
+        ENDIF
+        
+        IF di1 = 1 THEN
+        sigla;
+        ENDIF
+    ENDPROC
+    
+    PROC sigla()        
+        MoveJ phome, vmax, fine, tool0;
+        MoveL p10, vmax, fine, tool0;
+        MoveL Offs(p10,0,0,-160), vmax, fine, tool0;
+        MoveL Offs(p10,-30,0,0), vmax, fine, tool0;
+        MoveL Offs(p10,0,0,0), vmax, fine, tool0;
+        MoveL Offs(p10,0,70,0), vmax, fine, tool0;
+        MoveC Offs(p10,0,90,-40), Offs(p10,0,70,-80), vmax, z10, tool0;
+        MoveL Offs(p10,0,0,-80), vmax, fine, tool0;
+        MoveL Offs(p10,-30,0,-80), vmax, fine, tool0;
+        MoveL Offs(p10,0,60,-80), vmax, fine, tool0;
+        MoveL Offs(p10,0,90,-160), vmax, fine, tool0;
+        MoveL Offs(p10,-30,100,-40), vmax, fine, tool0;
+        MoveL Offs(p10,0,100,-40), vmax, fine, tool0;
+        MoveC Offs(p10,0,145,0), Offs(p10,0,190,-40), vmax, z10, tool0;
+        MoveC Offs(p10,-30,145,0), Offs(p10,-30,100,-40), vmax, z10, tool0;
+        MoveL Offs(p10,0,190,-120), vmax, fine, tool0;
+        MoveC Offs(p10,0,145,-160), Offs(p10,0,100,-120), vmax, z10, tool0;
+        MoveC Offs(p10,-30,145,-160), Offs(p10,-30,190,-120), vmax, z10, tool0;
+        MoveL Offs(p10,-30,200,0), vmax, fine, tool0;
+        MoveL Offs(p10,0,240,-160), vmax, fine, tool0;
+        MoveL Offs(p10,0,260,0), vmax, fine, tool0;
+        MoveL Offs(p10,0,280,-160), vmax, fine, tool0;
+        MoveL Offs(p10,0,320,0), vmax, fine, tool0;
+        MoveJ phome, vmax, fine, tool0;
+    ENDPROC
+    
+    PROC r()
+        MoveJ phome, vmax, fine, tool0;
+        MoveL p10, vmax, fine, tool0;
+        MoveL Offs(p10,0,0,-160), vmax, fine, tool0;
+        MoveL Offs(p10,-30,0,0), vmax, fine, tool0;
+        MoveL Offs(p10,0,0,0), vmax, fine, tool0;
+        MoveL Offs(p10,0,70,0), vmax, fine, tool0;
+        MoveC Offs(p10,0,90,-40), Offs(p10,0,70,-80), vmax, z10, tool0;
+        MoveL Offs(p10,0,0,-80), vmax, fine, tool0;
+        MoveL Offs(p10,-30,0,-80), vmax, fine, tool0;
+        MoveL Offs(p10,0,60,-80), vmax, fine, tool0;
+        MoveL Offs(p10,0,90,-160), vmax, fine, tool0;
+        MoveJ phome, vmax, fine, tool0;
+    ENDPROC
+    
+    PROC s()
+        MoveJ phome, vmax, fine, tool0;
+        MoveL Offs(p10,0,100,-40), vmax, fine, tool0;
+        MoveC Offs(p10,0,145,0), Offs(p10,0,190,-40), vmax, z10, tool0;
+        MoveC Offs(p10,-30,145,0), Offs(p10,-30,100,-40), vmax, z10, tool0;
+        MoveL Offs(p10,0,190,-120), vmax, fine, tool0;
+        MoveC Offs(p10,0,145,-160), Offs(p10,0,100,-120), vmax, z10, tool0;
+        MoveC Offs(p10,-30,145,-160), Offs(p10,-30,190,-120), vmax, z10, tool0;
+        MoveJ phome, vmax, fine, tool0;
+    ENDPROC
+    
+    PROC w()
+        MoveJ phome, vmax, fine, tool0;
+        MoveL p10, vmax, fine, tool0;
+        MoveL Offs(p10,0,20,-160), vmax, fine, tool0;
+        MoveL Offs(p10,0,40,0), vmax, fine, tool0;
+        MoveL Offs(p10,0,60,-160), vmax, fine, tool0;
+        MoveL Offs(p10,0,80,0), vmax, fine, tool0;
+        MoveJ phome, vmax, fine, tool0;
+    ENDPROC
+ENDMODULE
